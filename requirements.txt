@@ -1,0 +1,4 @@
+openai
+github3.py
+requests
+python-dotenv
