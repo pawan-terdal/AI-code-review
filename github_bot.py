@@ -41,8 +41,11 @@ def comment_on_pr(file_path, code_snippet, file_obj):
 
     comment = f"🚀 AI Code Review Suggestion for `{file_path}`:\n\n{suggestion}"
 
-
+    fdasfds()
     pr.create_review_comment(comment, commit_id, file_path, position)
+    
+def fdasfds():
+    print("blah blah blah")
 
 if __name__ == "__main__":
     pr_files = fetch_pr_files()
