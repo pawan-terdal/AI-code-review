@@ -43,6 +43,10 @@ def comment_on_pr(file_path, code_snippet, file_obj):
 
 
     pr.create_review_comment(comment, commit_id, file_path, position)
+    
+def foo():
+    while True:
+        break
 
 if __name__ == "__main__":
     pr_files = fetch_pr_files()
