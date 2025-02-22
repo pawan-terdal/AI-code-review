@@ -26,7 +26,7 @@ def fetch_pr_file_content(file_path):
         if file.filename == file_path:
             return file.patch, file 
 
-    return None, None
+    return None, None, None
 
 def comment_on_pr(file_path, code_snippet, file_obj):
     suggestion = analyze_code_with_ai(code_snippet)
@@ -40,9 +40,6 @@ def comment_on_pr(file_path, code_snippet, file_obj):
     position = file_obj.patch.count("\n")
 
     comment = f"🚀 AI Code Review Suggestion for `{file_path}`:\n\n{suggestion}"
-
-
-    pr.create_review_comment(comment, commit_id, file_path, position)
 
 if __name__ == "__main__":
     pr_files = fetch_pr_files()

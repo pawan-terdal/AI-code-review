@@ -23,6 +23,9 @@ def analyze_code_with_ai(code_snippet):
 
     return response.choices[0].message.content
 
+def foo():
+    print("you suck")
+
 if __name__ == "__main__":
     sample_code = """def add(a, b): return a+b"""
     print(analyze_code_with_ai(sample_code))
